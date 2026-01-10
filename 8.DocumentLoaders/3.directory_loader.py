@@ -1,11 +1,14 @@
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyPDFLoader,DirectoryLoader
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
 
-
-loader = PyPDFLoader(file_path="8.DocumentLoaders/dl-curriculum.pdf")
+loader = DirectoryLoader(
+    path="8.DocumentLoaders/some_folder",
+    glob='*.pdf',
+    loader_cls=PyPDFLoader
+)
 
 docs = loader.load()
 
