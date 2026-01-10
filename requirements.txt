@@ -70,7 +70,7 @@ multidict==6.7.0
 mypy_extensions==1.1.0
 narwhals==2.15.0
 networkx==3.6.1
-numpy==2.4.0
+numpy==2.4.1
 openai==2.14.0
 orjson==3.11.5
 ormsgpack==1.12.1
